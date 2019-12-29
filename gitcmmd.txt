@@ -1,0 +1,124 @@
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git init
+Initialized empty Git repository in C:/Users/group021/Documents/angularpro/.git/
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git status                                                                                                On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        angpro3/
+        angularpro1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git add angpro3                                                                                           warning: adding embedded git repository: angpro3
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> angpro3
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached angpro3
+hint:
+hint: See "git help submodule" for more information.
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git commit -m "msg"
+[master (root-commit) 3b84fad] msg
+ 1 file changed, 1 insertion(+)
+ create mode 160000 angpro3
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git remote add origin https://github.com/pruthvikalariya/hello.git                   
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git commit -m "msg1"
+On branch master
+Changes not staged for commit:
+        modified:   angpro3 (modified content)
+
+Untracked files:
+        angularpro1/
+
+no changes added to commit
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git push -u origin master
+remote: Permission to pruthvikalariya/hello.git denied to Nikita-0105.
+fatal: unable to access 'https://github.com/pruthvikalariya/hello.git/': The requested URL returned error: 403
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git logout pruthvikalariya                                                                                git: 'logout' is not a git command. See 'git --help'.
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git push -u origin master                                                            Enumerating objects: 2, done.
+Counting objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 198 bytes | 99.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/pruthvikalariya/hello.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git clone https://github.com/pruthvikalariya/MiniProject.git
+Cloning into 'MiniProject'...
+remote: Enumerating objects: 93, done.
+remote: Counting objects: 100% (93/93), done.
+remote: Compressing objects: 100% (70/70), done.
+remote: Total 93 (delta 14), reused 53 (delta 1), pack-reused 0
+Unpacking objects: 100% (93/93), done.
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git branch xyz
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (master)
+$ git checkout xyz                                                                     Switched to branch 'xyz'
+M       angpro3
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (xyz)
+$ git push -u origin xyz                                                               Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'xyz' on GitHub by visiting:
+remote:      https://github.com/pruthvikalariya/hello/pull/new/xyz
+remote:
+To https://github.com/pruthvikalariya/hello.git
+ * [new branch]      xyz -> xyz
+Branch 'xyz' set up to track remote branch 'xyz' from 'origin'.
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (xyz)
+$ git diff
+diff --git a/angpro3 b/angpro3
+--- a/angpro3
++++ b/angpro3
+@@ -1 +1 @@
+-Subproject commit 2f5b39b9b4ab35f9a274e19bc536869a96ff23dd
++Subproject commit 2f5b39b9b4ab35f9a274e19bc536869a96ff23dd-dirty
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (xyz)
+$ git merge xyz
+Already up to date.
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (xyz)
+$ git merge master
+Already up to date.
+
+group021@PC21 MINGW64 /c/Users/group021/Documents/angularpro (xyz)
+$
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+JENKIN
+
+
+java -jar jenkins.war --httpPort=8085
